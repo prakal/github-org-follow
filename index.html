@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+	<h1> Github Auto-follow organization </h1>
+</head>
+
+
+<body>
+
+	<form id="target" action="" method="post">
+	  <input id="name" type="text" name="name" placeholder="Github username" required>
+	  <input id="password" type="password" name="password" placeholder="Github password" required>
+
+	  <input type="submit" value="Submit">
+	</form>
+
+	<script type="text/javascript">
+
+		$( "#target" ).submit(function( event ) {
+		       event.preventDefault();
+		       // $('#target').append('<div id="loading"> Loading... </div>');
+		       var username = $("#target :input")[0].value;
+		       var password = $("#target :input")[1].value;
+
+		       console.log('username',username,'password',password);
+		       
+	       });
+	</script>
+
+</body>
+
+</html>
